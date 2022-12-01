@@ -1,35 +1,9 @@
 ## Day 01 -  
 
-Description
-
-``` ruby
-000
-```
-
-Description
-
-``` ruby
-000
-```
-
-Description
-
-Your puzzle answer was  `0000`.
+Your puzzle answer was  `00000`.
 
 ###  Part Two 
 
-Description
+Your puzzle answer was  `00000`.
 
-``` ruby
-000
-```
 
-Description
-
-```
-000
-```
-
-Description
-
-Your puzzle answer was  `0000`.
