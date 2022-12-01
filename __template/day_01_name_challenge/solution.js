@@ -1,21 +1,51 @@
+const fs = require('fs');
+
+// read input file
+let content_page = fs.readFileSync('input.txt','utf8')
+
+//let content_page = document.documentElement.innerText;
+let lines = content_page.split('\n');
 
 
-def function_name(filename):
-    count = 0
-    values_list = []
+// functio of solution 1th star
+function star1(lines){
+   
+    for (index = 0; index < lines.length - 2; index++) {
 
-    with open(filename, 'r', encoding='utf-8') as values:
-        for value in values:
-            values_list.append(int(value.strip("\n")))
+        let result = 0;
+        let element = lines[index];
+       
+        for (index = 0; index < lines.length - 2; index++) {
+            
+            // code for star 1
 
-    for i in range(len(values_list)-1):
-        if values_list[i+1] > values_list[i]:
-            count += 1
+        }
+    }
+    
+    return result;
 
-    return count
-
-
-# Expected ????
-print(function_name('input.txt'))
+}
 
 
+// functio of solution 2th star
+function star2(lines){
+   
+    for (index = 0; index < lines.length - 2; index++) {
+
+        let result = 0;
+        let element = lines[index];
+       
+        for (index = 0; index < lines.length - 2; index++) {
+            
+            // code for star 2
+
+        }
+    }
+    
+    return result;
+
+}
+
+
+console.log('star1 ' + star1(lines));
+console.log('STAR2 ' + star2(lines));
