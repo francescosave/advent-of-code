@@ -5,7 +5,7 @@ People use them as a speed contest, interview prep, company training, university
 
 ## Year 2022
 
- - *Day 01* - 
+ - *Day 01* - **Calorie Counting**
  - *Day 02* - 
  - *Day 03* - 
  - *Day 04* - 
