@@ -13,10 +13,10 @@ function star1(lines){
     for (index = 0; index < lines.length - 2; index++) {
 
         let result = 0;
-        let element = lines[index];
-       
+               
         for (index = 0; index < lines.length - 2; index++) {
-            
+            let element = lines[index];
+
             // code for star 1
 
         }
@@ -33,9 +33,10 @@ function star2(lines){
     for (index = 0; index < lines.length - 2; index++) {
 
         let result = 0;
-        let element = lines[index];
+
        
         for (index = 0; index < lines.length - 2; index++) {
+            let element = lines[index];
             
             // code for star 2
 
