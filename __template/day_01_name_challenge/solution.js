@@ -1,48 +1,45 @@
 const fs = require('fs');
 
 // read input file
-let content_page = fs.readFileSync('input.txt','utf8')
+let content_page = fs.readFileSync('input.txt', 'utf8')
 
 //let content_page = document.documentElement.innerText;
 let lines = content_page.split('\n');
 
 
 // functio of solution 1th star
-function star1(lines){
-   
-    for (index = 0; index < lines.length - 2; index++) {
+function star1(lines) {
 
-        let result = 0;
-               
-        for (index = 0; index < lines.length - 2; index++) {
-            let element = lines[index];
+    var result = 0;
 
-            // code for star 1
+    for (index = 0; index < lines.length - 1; index++) {
+        let element = lines[index];
 
-        }
+        // code for star 1
+
     }
-    
+
     return result;
 
 }
 
 
 // functio of solution 2th star
-function star2(lines){
-   
-    for (index = 0; index < lines.length - 2; index++) {
+function star2(lines) {
 
-        let result = 0;
 
-       
-        for (index = 0; index < lines.length - 2; index++) {
-            let element = lines[index];
-            
-            // code for star 2
 
-        }
+    var result = 0;
+
+
+    for (index = 0; index < lines.length - 1; index++) {
+        let element = lines[index];
+
+        // code for star 2
+
     }
-    
+
+
     return result;
 
 }
