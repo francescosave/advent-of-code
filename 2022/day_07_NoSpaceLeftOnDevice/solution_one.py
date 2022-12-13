@@ -1,0 +1,1 @@
+print('solution one in python')
