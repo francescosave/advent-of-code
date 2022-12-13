@@ -18,7 +18,7 @@ function star1(lines) {
 
     
 
-    for (index = 0; index < lines.length - 950; index++) {
+    for (index = 0; index < lines.length - 1; index++) {
 
         const element = lines[index].split(' ');
         //console.log(lines[index]);
