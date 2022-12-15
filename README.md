@@ -201,7 +201,8 @@ People use them as a speed contest, interview prep, company training, university
 
 ## Year 2015
 
- - *Day 01* - **Not Quite Lisp**
+
+ - *Day 01* - [**Not Quite Lisp**](https://github.com/francescosave/advent-of-code/tree/main/2015/day_01_NotQuiteLisp)
  - *Day 02* - 
  - *Day 03* - 
  - *Day 04* - 
