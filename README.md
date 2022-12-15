@@ -6,7 +6,7 @@ People use them as a speed contest, interview prep, company training, university
 ## Year 2022
 
  - *Day 01* - [**Calorie Counting**](https://github.com/francescosave/advent-of-code/tree/main/2022/day_01_CalorieCounting)
- - *Day 02* - [**Rock Paper Scissors**](https://github.com/francescosave/advent-of-code/tree/main/2022/day_02_RockPaperScissorss)
+ - *Day 02* - [**Rock Paper Scissors**](https://github.com/francescosave/advent-of-code/tree/main/2022/day_02_RockPaperScissors)
  - *Day 03* - 
  - *Day 04* - [**Camp Cleanup**](https://github.com/francescosave/advent-of-code/tree/main/2022/day_04_CampCleanup)
  - *Day 05* - [**Supply Stacks**](https://github.com/francescosave/advent-of-code/tree/main/2022/day_05_CampCleanup)
