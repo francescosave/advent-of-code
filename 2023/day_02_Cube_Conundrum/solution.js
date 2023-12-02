@@ -12,70 +12,124 @@ let lines = content_page.split('\n');
 function star1(lines) {
 
     var result = 0;
+    
+    const max_red = 12;
+    const max_green = 13;
+    const max_blue = 14;
 
-    for (index = 0; index < lines.length - 1; index++) {
-        let element = lines[index];
-        console.log(element);
-        // code for star 1
+    let games = [];
 
-
-        // splittare per game : > parte sx [0]
-        // splittare parte dx [1] con ;
-        
-        // splittare per ,
-        // scrivere nell'oggetto
-        // ripetere set successivo
-
-        /*
-        // costriure un oggetto che riporti tutte le info
-        {
-            game : 1
-            set
-        }
-        */
-        const game = element.split(':')[0];
-        const game_sets = element.split(':')[1].split(';');
-
+    for (const game_line of lines) {
+       
+        //console.log(line);
+    
+        const game = game_line.split(':')[0];
+        const game_sets = game_line.split(':')[1].split(';');
 
         const game_description = game.split(' ')[0];
         const game_id = game.split(' ')[1];
-        
-      
-        
+        let is_valid = true;
+
+        let game_obj ={};
+        game_obj.game_id = game_id;
+        let number_set = 0;
 
         for (const game_set of game_sets) {
             for (const game_subset of game_set.split(',')) {
-                console.log(game_id,game_subset);
+                
+                const cubes_total = game_subset.trim().split(' ')[0];
+                const cubes_color = game_subset.trim().split(' ')[1];
+
+                //console.log(game_id,game_subset.trim().split(' ')[0] + game_subset.trim().split(' ')[1]);
+                               
+                if (cubes_color === 'red' && cubes_total > max_red)
+                    is_valid = false;
+                if (cubes_color === 'green' && cubes_total > max_green)
+                    is_valid = false;
+                if (cubes_color === 'blue' && cubes_total > max_blue)
+                    is_valid = false;  
             }
-            
+            number_set++;    
         }
         
-        
+        game_obj.number_set = number_set;
+        game_obj.is_valid = is_valid;
+        games.push(game_obj);  
+         
         //console.log(game_id,game_sets);
-
-
     }
+
+    console.log(games);
+
+    result = games.reduce((accumulator, currentValue) => {        
+        if(currentValue.is_valid)
+            accumulator = accumulator + Number(currentValue.game_id);
+        return accumulator},0);
 
     return result;
 
 }
 
 
-// functio of solution 2th star
+// function of solution 2th star
 function star2(lines) {
 
-
-
     var result = 0;
+    let games = [];
+    
 
+    for (const game_line of lines) {
+       
+        //console.log(line);
+    
+        const game = game_line.split(':')[0];
+        const game_sets = game_line.split(':')[1].split(';');
 
-    for (index = 0; index < lines.length - 1; index++) {
-        let element = lines[index];
+        const game_description = game.split(' ')[0];
+        const game_id = game.split(' ')[1];
+        let is_valid = true;
 
-        // code for star 2
+        let game_obj ={};
+        game_obj.game_id = game_id;
 
+        let max_red = 0;
+        let max_green = 0;
+        let max_blue = 0;
+
+        for (const game_set of game_sets) {
+            for (const game_subset of game_set.split(',')) {
+                
+                const cubes_total = game_subset.trim().split(' ')[0];
+                const cubes_color = game_subset.trim().split(' ')[1];
+                //console.log(game_id,game_subset.trim().split(' ')[0] + game_subset.trim().split(' ')[1]);
+
+                if (cubes_color === 'red' && cubes_total > max_red)
+                    max_red = +cubes_total;
+                
+                if (cubes_color === 'green' && cubes_total > max_green)
+                    max_green = +cubes_total;
+                
+                if (cubes_color === 'blue' && cubes_total > max_blue)
+                    max_blue = +cubes_total;
+                 
+            } 
+        }
+
+            game_obj.max_red = max_red;
+            game_obj.max_green = max_green;
+            game_obj.max_blue = max_blue;
+        
+        games.push(game_obj);  
+        //console.log(game_id,game_sets);
+       
     }
 
+    console.log(games);
+
+    result = games.reduce(( accumulator, currentValue) => {
+                            accumulator +=  currentValue.max_red * currentValue.max_green * currentValue.max_blue;            
+                            return accumulator
+                            },0);
 
     return result;
 
