@@ -4,7 +4,7 @@ Your puzzle answer was  `54940`.
 
 ###  Part Two 
 
-Your puzzle answer was  `00000`.
+Your puzzle answer was  `54208`.
 
 
 
